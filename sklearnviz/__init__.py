@@ -1,1 +1,2 @@
 from roc import plot_roc
+from precision_recall import plot_precision_recall

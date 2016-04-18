@@ -25,6 +25,10 @@ $ pip install scikit-viz
         ```
         Provide this dictionary describing the economic utility and frequency of false positives and false negatives, and it will produce an __indifference curve__ on the plot which provides a threshold above which the classifier is economically useful. For more information on this extremely interesting concept, see this blog post (http://blog.mldb.ai/blog/posts/2016/01/ml-meets-economics/)
     
+ - __plot_precision_recall__(y, y_pred, spacing=0.2)
+    - __y__ actual value (1 or 0)
+    - __y_pred__ probability of 1
+    - __spacing__ governs the spacing between threshold labels
 
 ### Usage
 ```python
@@ -41,6 +45,9 @@ y_pred = clf.predict_proba(X)[:,1]
 
 # this is where the magic happens
 plot_roc(y, y_pred, spacing=0.1)
+
+plot_precision_recall(y, y_pred, spacing=0.15)
 ```
 
 ![roc_curve](https://raw.githubusercontent.com/fernavid/scikit-viz/master/tests/roc_example.png)
+![precision_recall_curve](https://raw.githubusercontent.com/fernavid/scikit-viz/master/tests/precision_recall.png)
