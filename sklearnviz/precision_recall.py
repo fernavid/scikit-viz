@@ -9,7 +9,6 @@ def plot_precision_recall(y, y_pred, spacing=0.2):
     plt.title('Precision vs Recall Curve', fontsize=18)
     plt.plot(recall, precision, 'b', label='AUC = %0.2f'% roc_auc)
     plt.legend(loc='lower right')
-    plt.plot([0,1],[0,1],'r--')
     plt.xlim([-0.1,1.2])
     plt.ylim([-0.1,1.2])
     plt.ylabel('Precision', fontsize=16)
