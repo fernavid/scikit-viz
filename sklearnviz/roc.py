@@ -1,3 +1,6 @@
+from sklearn.metrics import roc_curve, auc
+import matplotlib.pyplot as plt
+
 def get_s(c):
     num = c['rate_negative'] * (c['tn_util'] - c['fp_util'])
     den = c['rate_positive'] * (c['tp_util'] - c['fn_util'])
